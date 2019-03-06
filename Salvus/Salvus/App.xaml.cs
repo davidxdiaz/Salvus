@@ -2,6 +2,7 @@
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
+
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace Salvus
 {
@@ -11,7 +12,7 @@ namespace Salvus
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new Login;
         }
 
         protected override void OnStart()
