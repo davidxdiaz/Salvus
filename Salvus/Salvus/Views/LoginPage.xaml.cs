@@ -14,7 +14,7 @@ namespace Salvus.Views
 	{
 		public LoginPage ()
 		{
-			InitializeComponent ();
+			InitializeComponent();
 		}
 	}
 }
