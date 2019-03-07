@@ -42,13 +42,17 @@
 
                 <Label Grid.Row="4"/>
                 
-                <Label Grid.Row="5" HorizontalTextAlignment="Center" FontSize="10" VerticalTextAlignment="Center">
+                <Label Grid.Row="5" HorizontalTextAlignment="Center" FontSize="10" VerticalTextAlignment="Center" >
                     <Label.FormattedText >
                         <FormattedString>
                             <Span Text="Don't have an account? "/>
-                            <Span Text="Sign Up" FontAttributes="Bold" FontSize="10"/>
+                            <Span Text="Sign Up" FontAttributes="Bold" FontSize="10" />
                         </FormattedString>
                     </Label.FormattedText>
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer
+                               Tapped="initRegister" />
+                        </Label.GestureRecognizers>
                 </Label>
                
                 <Label Grid.Row="6"  Text="Did you forget your password?" HorizontalTextAlignment="Center" FontSize="10"/>

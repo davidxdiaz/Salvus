@@ -34,5 +34,12 @@ namespace Salvus.Views
          //       DisplayAlert("Login", "Login Not Correct", "Ok");
          //   }
         }
-	}
+
+        private async void initRegister(object sender, EventArgs args)
+        {
+            var register= new RegisterPage();
+            //await Navigation.PushAsync(register);
+            App.Current.MainPage = new NavigationPage(register);
+        }
+    }
 }

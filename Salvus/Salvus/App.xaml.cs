@@ -12,7 +12,7 @@ namespace Salvus
         {
             InitializeComponent();
 
-            MainPage = new Login;
+            MainPage = new Salvus.Views.LoginPage();
         }
 
         protected override void OnStart()
