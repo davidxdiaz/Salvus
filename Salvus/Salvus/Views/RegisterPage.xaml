@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:controls="clr-namespace:XLabs.Forms.Controls;assembly=XLabs.Forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Salvus.Views.RegisterPage"
+             BackgroundColor="White"
+             >
+
+
+
+
+    <ContentPage.Content>
+        <Grid BackgroundColor="White">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.35*"/> 
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="0.15*"/>
+            </Grid.RowDefinitions>
+            <StackLayout Grid.Row="0" Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Margin="0,10,0,0" >
+
+
+                <Image Source="logo_salvus.png" VerticalOptions="Center" Opacity="1"  Margin="0,0,0,0" />
+
+            </StackLayout>
+
+            <Grid Grid.Row="1" Margin="30,0,30,0" BackgroundColor="White">
+
+                <Grid.RowDefinitions>
+
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="40"/>    <!--  1 Entry: Nombre & Apellidos -->
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="70"/>
+                    <RowDefinition Height="20"/>    <!-- Espacio -->
+                    <RowDefinition Height="40"/>    <!-- Check Box  -->
+                    <RowDefinition Height="80"/>    <!-- Button Register-->
+                    <RowDefinition Height="0.1*"/>
+                    <RowDefinition Height="*"/>
+
+                </Grid.RowDefinitions>
+                
+                <Grid Grid.Row="1" Margin="0,0,0,0" BackgroundColor="White">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="0.8*"/>
+                    </Grid.RowDefinitions>
+
+                    <Entry Grid.Row="0" Grid.Column="0" x:Name="entry_firstName" Placeholder="Nombre" PlaceholderColor="#bababa" FontSize="11" HorizontalTextAlignment="Start"/>
+                    <Entry Grid.Row="0" Grid.Column="1" x:Name="entry_lastName" Placeholder="Apellidos*" PlaceholderColor="#bababa" FontSize="11" HorizontalTextAlignment="Start"/>
+                    
+                </Grid>
+                
+                <Entry Grid.Row="2" x:Name="entry_email" Placeholder="E-mail*" PlaceholderColor="#bababa" FontSize="11" HorizontalTextAlignment="Start"/>
+                <Entry Grid.Row="3" x:Name="entry_address1" Placeholder="Dirección 1" PlaceholderColor="#bababa" FontSize="11" HorizontalTextAlignment="Start"/>
+
+                <Grid Grid.Row="4" Margin="0,0,0,0" BackgroundColor="White">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="35"/>
+                        <RowDefinition Height="35"/>
+                    </Grid.RowDefinitions>
+
+                    <Entry Grid.Row="0" Grid.Column="0" x:Name="entry_mobile" Placeholder="Télefono*" PlaceholderColor="#bababa" FontSize="11" HorizontalTextAlignment="Start"/>
+                    <Entry Grid.Row="0" Grid.Column="1" x:Name="entry_phone" Placeholder="Celular" PlaceholderColor="#bababa" FontSize="11" HorizontalTextAlignment="Start"/>
+
+                    <Entry Grid.Row="1" Grid.Column="0" x:Name="entry_mobile2" Placeholder="Télefono 2" PlaceholderColor="#bababa" FontSize="11" HorizontalTextAlignment="Start"/>
+                    <Entry Grid.Row="1"  Grid.Column="1" x:Name="entry_phone2" Placeholder="Celular 2" PlaceholderColor="#bababa" FontSize="11" HorizontalTextAlignment="Start"/>
+
+                </Grid>
+
+                <FlexLayout Grid.Row="6">
+                    <controls:CheckBox></controls:CheckBox>
+                    
+                        <Label  FontSize="11" VerticalTextAlignment="Center" >
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="I agree the "/>
+                                <Span Text="Terms and Conditions" FontAttributes="Bold" FontSize="10"/>
+                                <Span Text=" and "/>
+                                <Span Text="Privacy Policy" FontAttributes="Bold" FontSize="10" />
+                                <!--
+                                -->
+                            </FormattedString>
+                        </Label.FormattedText>
+                    
+
+                    </Label>
+                   
+                </FlexLayout>
+               
+                <Button Grid.Row="7" CornerRadius="5" x:Name="btn_login" Text="Registrar"  BackgroundColor="#21AEE3" TextColor="White" FontSize="Default" HeightRequest="40" VerticalOptions="Start"  />
+                <Label Grid.Row="8"/>
+
+
+            </Grid>
+
+            <StackLayout Grid.Row="2" BackgroundColor="White" Margin="0,0,0,0">
+
+                <Label FontSize="10" VerticalOptions="FillAndExpand" VerticalTextAlignment="Center" HorizontalTextAlignment="Center">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="by signing in you agree to our "/>
+                            <Span Text="Terms" FontAttributes="Bold" FontSize="10"/>
+                            <Span Text=" and "/>
+                            <Span Text="Privacy Policy" FontAttributes="Bold" FontSize="10"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+
+
+
+            </StackLayout>
+
+
+
+        </Grid>
+
+
+    </ContentPage.Content>
+</ContentPage>

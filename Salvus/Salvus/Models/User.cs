@@ -10,11 +10,24 @@ namespace Salvus.Models
         public string Password { get; set; }
 
 
-        public User(string username,string password)
+     
+    
+
+        public bool checkAccount()
         {
-            this.UserName = username;
-            this.Password = password;
+            if (this.UserName.Equals("") || this.Password.Equals(""))
+            {
+                return false;
+            }else if (existAccount())
+            {
+                
+            }
+            return false;
         }
 
+        private bool existAccount()
+        {
+            return false;
+        }
     }
 }

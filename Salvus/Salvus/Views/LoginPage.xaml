@@ -36,9 +36,9 @@
                     <RowDefinition Height="*"/>
 
                 </Grid.RowDefinitions>
-                <Entry Grid.Row="1" Placeholder="Email Id" PlaceholderColor="#bababa" FontSize="11" HorizontalTextAlignment="Start"/>
-                <Entry Grid.Row="2" Placeholder="Password" PlaceholderColor="#bababa" FontSize="11" HorizontalTextAlignment="Start"/>
-                <Button Text="LOGIN" BackgroundColor="#21AEE3" TextColor="White" FontSize="10" HeightRequest="40" VerticalOptions="Start" Grid.Row="3" />
+                <Entry Grid.Row="1" x:Name="entry_email" Placeholder="Email Id" PlaceholderColor="#bababa" FontSize="11" HorizontalTextAlignment="Start"/>
+                <Entry Grid.Row="2" x:Name="entry_password" Placeholder="Password" IsPassword="True" PlaceholderColor="#bababa" FontSize="11" HorizontalTextAlignment="Start"/>
+                <Button CornerRadius="5" x:Name="btn_login" Clicked="Login" Text="LOGIN" BackgroundColor="#21AEE3" TextColor="White" FontSize="10" HeightRequest="40" VerticalOptions="Start" Grid.Row="3" />
 
                 <Label Grid.Row="4"/>
                 
@@ -65,7 +65,7 @@
                     <Label.FormattedText>
                         <FormattedString>
                             <Span Text="by signing in you agree to our "/>
-                            <Span Text="Terms" FontAttributes="Bold" FontSize="8"/>
+                            <Span Text="Terms" FontAttributes="Bold" FontSize="10"/>
                             <Span Text=" and "/>
                             <Span Text="Privacy Policy" FontAttributes="Bold" FontSize="10"/>
                         </FormattedString>

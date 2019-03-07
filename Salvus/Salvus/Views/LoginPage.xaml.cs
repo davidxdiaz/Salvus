@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Salvus.Data;
+using Salvus.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,5 +18,21 @@ namespace Salvus.Views
 		{
 			InitializeComponent ();
 		}
+
+        public void Login(Object sender,EventArgs e)
+        {
+            
+           // FirebaseConnection firebase = new FirebaseConnection();
+            //Task<User> account=firebase.LoginAccount(entry_email.Text, entry_password.Text);
+            
+         //   if (account != null)
+         //   {
+                DisplayAlert("Login","Loggin Success","Ok");
+         ///   }
+         //   else
+          //  {
+         //       DisplayAlert("Login", "Login Not Correct", "Ok");
+         //   }
+        }
 	}
 }
