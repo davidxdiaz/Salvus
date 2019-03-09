@@ -30,6 +30,7 @@
 
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="40"/>    <!--  1 Entry: Nombre & Apellidos -->
+                    <RowDefinition Height="40"/>    <!-- Email-->
                     <RowDefinition Height="40"/>
                     <RowDefinition Height="40"/>
                     <RowDefinition Height="70"/>
@@ -52,9 +53,10 @@
                 </Grid>
                 
                 <Entry Grid.Row="2" x:Name="entry_email" Placeholder="E-mail*" PlaceholderColor="#bababa" FontSize="11" HorizontalTextAlignment="Start"/>
-                <Entry Grid.Row="3" x:Name="entry_address1" Placeholder="Dirección 1" PlaceholderColor="#bababa" FontSize="11" HorizontalTextAlignment="Start"/>
+                <Entry Grid.Row="3" x:Name="entry_password" IsPassword="True" Placeholder="Password*"  PlaceholderColor="#bababa" FontSize="11" HorizontalTextAlignment="Start"/>
+                <Entry Grid.Row="4" x:Name="entry_address1" Placeholder="Dirección 1" PlaceholderColor="#bababa" FontSize="11" HorizontalTextAlignment="Start"/>
 
-                <Grid Grid.Row="4" Margin="0,0,0,0" BackgroundColor="White">
+                <Grid Grid.Row="5" Margin="0,0,0,0" BackgroundColor="White">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="35"/>
                         <RowDefinition Height="35"/>
@@ -88,8 +90,8 @@
                    
                 </FlexLayout>
                
-                <Button Grid.Row="7" CornerRadius="5" x:Name="btn_login" Text="Registrar"  BackgroundColor="#21AEE3" TextColor="White" FontSize="Default" HeightRequest="40" VerticalOptions="Start"  />
-                <Label Grid.Row="8"/>
+                <Button Grid.Row="8" CornerRadius="5" x:Name="btn_login" Clicked="CreateAccount" Text="Registrar"  BackgroundColor="#21AEE3" TextColor="White" FontSize="Default" HeightRequest="40" VerticalOptions="Start"  />
+                <Label Grid.Row="9"/>
 
 
             </Grid>

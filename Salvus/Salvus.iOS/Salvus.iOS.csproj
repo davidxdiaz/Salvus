@@ -148,6 +148,21 @@
     <Reference Include="Xamarin.iOS" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="FirebaseDatabase.net">
+      <Version>4.0.1</Version>
+    </PackageReference>
+    <PackageReference Include="FireSharp">
+      <Version>2.0.4</Version>
+    </PackageReference>
+    <PackageReference Include="Toasts.Forms.Plugin">
+      <Version>3.3.2</Version>
+    </PackageReference>
+    <PackageReference Include="TTGSnackbar">
+      <Version>1.3.3</Version>
+    </PackageReference>
+    <PackageReference Include="Xam.Plugin.Connectivity">
+      <Version>3.2.0</Version>
+    </PackageReference>
     <PackageReference Include="Xamarin.Forms" Version="3.6.0.220655" />
     <PackageReference Include="Xamarin.Forms.Essentials.Controls">
       <Version>1.1.1</Version>
@@ -162,5 +177,11 @@
       <Project>{61DFBCF0-1859-45AE-A8E7-444C13049F4B}</Project>
       <Name>Salvus</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\complete_animate_icon.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\check_image.png" />
   </ItemGroup>
 </Project>

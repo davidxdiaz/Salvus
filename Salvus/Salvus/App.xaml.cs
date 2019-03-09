@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Salvus.Views;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -12,7 +13,7 @@ namespace Salvus
         {
             InitializeComponent();
 
-            MainPage = new Login;
+            MainPage = new CompleteRegister();
         }
 
         protected override void OnStart()
