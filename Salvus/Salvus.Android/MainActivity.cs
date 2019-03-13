@@ -14,8 +14,11 @@ namespace Salvus.Droid
     {
         protected override void OnCreate(Bundle savedInstanceState)
         {
+          
+           
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
+            CometChatImplementation.context = this;
 
             base.OnCreate(savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
