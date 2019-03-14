@@ -15,15 +15,16 @@ namespace Salvus.Droid
         protected override void OnCreate(Bundle savedInstanceState)
         {
 
-            Firebase.FirebaseApp.InitializeApp(this);
+ 
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
             CometChatImplementation.context = this;
 
             base.OnCreate(savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
-           // Firebase.FirebaseApp.initializeApp(this);
+            
             LoadApplication(new App());
+            Firebase.FirebaseApp.InitializeApp(this);
         }
     }
 }

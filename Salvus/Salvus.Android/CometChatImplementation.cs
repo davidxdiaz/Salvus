@@ -5,8 +5,17 @@ using Salvus.Droid;
 using Xamarin.Forms;
 using Org.Json;
 using Cometchat.Inscripts.Com.Cometchatcore.Coresdk;
-using CometChatUIBinding.Additions;
+//using CometChatUIBinding.Additions;
+
+//FIrebase
+using Android.Gms.Common;
+using Firebase.Messaging;
+using Firebase.Iid;
+using Android.Util;
 using Firebase;
+using Utils;
+using Com.Inscripts.Orm;
+using CometChatUIBinding.Additions;
 
 [assembly: Dependency(typeof(CometChatImplementation))]
 namespace Salvus.Droid
@@ -17,7 +26,7 @@ namespace Salvus.Droid
         public static Context context;
         public CometChatImplementation()
         {
-           
+           // Firebase.FirebaseApp.InitializeApp(context);
         }
 
         public void initializeCometChat(string SiteUrl, string LicenseKey, string ApiKey, bool isCometOnDemand, CometChatFormCallback callback)
@@ -26,7 +35,7 @@ namespace Salvus.Droid
             if (context != null)
             {
                 cometchat = CometChat.GetInstance(context);
-                
+            //    Firebase.FirebaseApp.InitializeApp(context);
                 cometchat.InitializeCometChat(SiteUrl, LicenseKey, ApiKey, isCometOnDemand, new CometChatCallback(success => callback.SuccessCallback((string)success), fail => callback.FailCallback((string)fail)));
             }
             else
@@ -38,7 +47,7 @@ namespace Salvus.Droid
         public void loginWithUID(string UID, CometChatFormCallback callback)
         {
             cometchat = CometChat.GetInstance(context);
-            
+           // Firebase.FirebaseApp.InitializeApp(context);
             cometchat.LoginWithUID(context, UID, new CometChatCallback(success => callback.SuccessCallback((string)success), fail => callback.FailCallback((string)fail)));
         }
 
@@ -46,6 +55,7 @@ namespace Salvus.Droid
         {
             if (context != null)
             {
+               // Firebase.FirebaseApp.InitializeApp(context);
                 cometchat.LaunchCometChat((Android.App.Activity)context, isFullScreen, new LaunchCallbacks(successObj => launchCallbacks.SuccessCallback((string)successObj), fail => launchCallbacks.FailCallback((string)fail), onChatroomInfo => launchCallbacks.ChatroomInfoCallback((string)onChatroomInfo), onError => launchCallbacks.ErrorCallback((string)onError), onLogout => launchCallbacks.LogoutCallback((string)onLogout), onMessageReceive => launchCallbacks.MessageReceiveCallback((string)onMessageReceive), onUserInfo => launchCallbacks.UserInfoCallback((string)onUserInfo), onWindowClose => launchCallbacks.WindowCloseCallback((string)onWindowClose)));
             }
             else
@@ -58,6 +68,7 @@ namespace Salvus.Droid
         {
             if (context != null)
             {
+               // Firebase.FirebaseApp.InitializeApp(context);
                 cometchat.LaunchCometChat((Android.App.Activity)context, isFullScreen, userOrGroupId, isGroup, setBackButton, new LaunchCallbacks(successObj => launchCallbacks.SuccessCallback((string)successObj), fail => launchCallbacks.FailCallback((string)fail), onChatroomInfo => launchCallbacks.ChatroomInfoCallback((string)onChatroomInfo), onError => launchCallbacks.ErrorCallback((string)onError), onLogout => launchCallbacks.LogoutCallback((string)onLogout), onMessageReceive => launchCallbacks.MessageReceiveCallback((string)onMessageReceive), onUserInfo => launchCallbacks.UserInfoCallback((string)onUserInfo), onWindowClose => launchCallbacks.WindowCloseCallback((string)onWindowClose)));
             }
             else

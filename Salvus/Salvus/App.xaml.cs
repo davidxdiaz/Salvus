@@ -18,6 +18,8 @@ namespace Salvus
         protected override void OnStart()
         {
             // Handle when your app starts
+            //com.companyname.Salvus
+
         }
 
         protected override void OnSleep()
