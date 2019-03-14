@@ -25,9 +25,9 @@ namespace Salvus.Views
             OnInitializeCometChat();
 		}
 
-        String siteurl = "https://app.cometchat.com/#/apps/339c56dff54cb";
-        String licenseKey = "COMETCHAT-XXXXX-XXXXX-XXXXX-XXXXX"; // Replace the value with your CometChat License Key here
-        String apiKey = "a79287458cc9b97fb6c95196a53e78bdf872aad4"; // Replace the value with your CometChat API Key here
+        String siteurl = "";
+        String licenseKey = "COMETCHAT-LZ5F9-5E2PV-YKIZ8-4PAU1"; // Replace the value with your CometChat License Key here
+        String apiKey = "52745x463548bdea2e7480956a9fa7a9929f67"; // Replace the value with your CometChat API Key here
         Boolean isCometOnDemand = true;
         private String UID1 = "SUPERHERO1";
         private String UID2 = "SUPERHERO2";
@@ -73,6 +73,7 @@ namespace Salvus.Views
         {
             System.Console.WriteLine("Hello " + UID);
             var cometchat = DependencyService.Get<CometChatInterface>();
+            
             cometchat.loginWithUID(UID, new Callbacks(success => loginSuccess(success), fail => loginFail(fail)));
 
         }
@@ -181,13 +182,14 @@ namespace Salvus.Views
             
          //   if (account != null)
          //   {
-                DisplayAlert("Login","Loggin Success","Ok");
+                
                 OnLoginSuperHero1(sender, e);
-         ///   }
-         //   else
-          //  {
-         //       DisplayAlert("Login", "Login Not Correct", "Ok");
-         //   }
+                //DisplayAlert("Login", "Loggin Success", "Ok");
+            ///   }
+            //   else
+            //  {
+            //       DisplayAlert("Login", "Login Not Correct", "Ok");
+            //   }
         }
 
         private async void initRegister(object sender, EventArgs args)

@@ -6,6 +6,7 @@ using Xamarin.Forms;
 using Org.Json;
 using Cometchat.Inscripts.Com.Cometchatcore.Coresdk;
 using CometChatUIBinding.Additions;
+using Firebase;
 
 [assembly: Dependency(typeof(CometChatImplementation))]
 namespace Salvus.Droid
@@ -16,6 +17,7 @@ namespace Salvus.Droid
         public static Context context;
         public CometChatImplementation()
         {
+           
         }
 
         public void initializeCometChat(string SiteUrl, string LicenseKey, string ApiKey, bool isCometOnDemand, CometChatFormCallback callback)
@@ -24,6 +26,7 @@ namespace Salvus.Droid
             if (context != null)
             {
                 cometchat = CometChat.GetInstance(context);
+                
                 cometchat.InitializeCometChat(SiteUrl, LicenseKey, ApiKey, isCometOnDemand, new CometChatCallback(success => callback.SuccessCallback((string)success), fail => callback.FailCallback((string)fail)));
             }
             else
@@ -35,6 +38,7 @@ namespace Salvus.Droid
         public void loginWithUID(string UID, CometChatFormCallback callback)
         {
             cometchat = CometChat.GetInstance(context);
+            
             cometchat.LoginWithUID(context, UID, new CometChatCallback(success => callback.SuccessCallback((string)success), fail => callback.FailCallback((string)fail)));
         }
 
